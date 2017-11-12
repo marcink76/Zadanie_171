@@ -26,7 +26,7 @@ public class FilteringMachineTwoTest {
     }
 
     @Test
-    public void shouldReturnKidNames() {
+    public void shouldReturnKidNames() { // zrobione
         // when
         List<String> kids = machine.findKidNames(people);
 

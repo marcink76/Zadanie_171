@@ -13,7 +13,7 @@ public class FilteringMachineTest {
 
     private FilteringMachine machine = new FilteringMachine();
 
-    @Test public void shouldFilterOutNotEvenNumbers() {
+    @Test public void shouldFilterOutNotEvenNumbers() { // zrobione
 
         // given
         List<Integer> numberList = new ArrayList<>();
@@ -35,7 +35,7 @@ public class FilteringMachineTest {
         assertThat(filteredList, hasItem(124));
     }
 
-    @Test public void shouldFilterOutNumberLowerThan20() {
+    @Test public void shouldFilterOutNumberLowerThan20() { // zrobione
 
         // given
         List<Integer> numberList = new ArrayList<>();
@@ -60,7 +60,7 @@ public class FilteringMachineTest {
     }
 
     @Test
-    public void shouldConvertTitlesToBooks() {
+    public void shouldConvertTitlesToBooks() { // zrobione
         // given
         List<String> titles = new ArrayList<>();
         titles.add("Gra o tron");
@@ -82,7 +82,7 @@ public class FilteringMachineTest {
     }
 
     @Test
-    public void shouldConvertTitlesToBooksAndFilterOutStartingWithGra() {
+    public void shouldConvertTitlesToBooksAndFilterOutStartingWithGra() { // zrobione
         // given
         List<String> titles = new ArrayList<>();
         titles.add("Gra o tron");
@@ -99,6 +99,4 @@ public class FilteringMachineTest {
         assertThat(books, hasItem(new Book("Gra o tron")));
         assertThat(books, hasItem(new Book("Gra o życie")));
     }
-
-
 }
