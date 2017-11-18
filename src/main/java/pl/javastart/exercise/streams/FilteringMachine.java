@@ -1,10 +1,6 @@
 package pl.javastart.exercise.streams;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import java.util.*;
 
 public class FilteringMachine {
 
@@ -48,15 +44,13 @@ public class FilteringMachine {
         for (String title : titles) {
             bookList.add(new Book(title));
         }
-        Iterator<Book> bookIterator = bookList.iterator();
 
-        while (bookIterator.hasNext()) {
-            Pattern pattern = Pattern.compile("Gra");
-            Matcher matcher = pattern.matcher(bookIterator.next().getTitle());
-            if (!matcher.find()) {
-                bookIterator.remove();
+        List<Book> tempBookList = new ArrayList<>();
+        for (Book books:bookList) {
+            if (books.getTitle().substring(0, 3).equals("Gra")) {
+                tempBookList.add(books);
             }
         }
-        return bookList;
+        return tempBookList;
     }
 }
